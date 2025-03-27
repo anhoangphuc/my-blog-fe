@@ -29,27 +29,10 @@
     "tailwindcss": "^4",
     "typescript": "^5"
   },
-  "husky": {
-  "hooks": {
-    "pre-commit": "lint-staged"
+  "lint-staged": {
+    "*.{js,ts.jsx,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
-},
-"lint-staged": {
-  "*.js": [
-    "eslint --fix",
-    "prettier --write"
-  ],
-  "*.ts": [
-    "eslint --fix",
-    "prettier --write"
-  ],
-  "*.jsx": [
-    "eslint --fix",
-    "prettier --write"
-  ],
-  "*.tsx": [
-    "eslint --fix",
-    "prettier --write"
-  ]
-}
 }
