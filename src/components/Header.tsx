@@ -1,7 +1,7 @@
-'use client'
-import Link from 'next/link'
-import Image from 'next/image'
-import { useState } from 'react'
+'use client';
+import Link from 'next/link';
+import Image from 'next/image';
+import { useState } from 'react';
 
 const NavLink = ({ href, children, onClick }: { href: string; children: React.ReactNode; onClick?: () => void }) => {
   return (
@@ -9,18 +9,18 @@ const NavLink = ({ href, children, onClick }: { href: string; children: React.Re
       <span className="relative z-10 text-xl">{children}</span>
       <span className="absolute bottom-[-4px] left-0 w-full h-0 bg-yellow-300 transition-all duration-300 group-hover:h-0.5 -z-10"></span>
     </Link>
-  )
-}
+  );
+};
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
   const closeMenu = () => {
-    setIsMenuOpen(false)
-  }
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full py-4 shadow-md z-10">
@@ -115,7 +115,7 @@ const Header = () => {
         )}
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
